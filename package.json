@@ -1,5 +1,6 @@
 {
   "name": "brittanychiang",
+  "homepage": "https://1109car.github.io/carlosprt",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,12 +8,17 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.15.1",
     "brittanychiang": "file:",
     "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
