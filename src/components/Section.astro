@@ -1,0 +1,48 @@
+---
+interface Props{
+    time:string;
+    titulo:string;
+    parrafo:string;
+    src:string;
+    lenguajes1?:string 
+    lenguajes2?:string | undefined;
+    lenguajes3?:string
+    lenguajes4?:string;
+    lenguajes5?:string
+    lenguajes6?:string;
+}
+
+const {time,titulo,parrafo, lenguajes1, lenguajes3, lenguajes2,lenguajes4,lenguajes5,lenguajes6, src} = Astro.props
+---
+
+<section class="h-auto" aria-label="work experiencie">
+    <div class="">
+         <a href={src} class=" group grid grid-cols-[1fr_4fr] pt-4 pb-4 hover:bg-slate-500 hover:bg-opacity-10 p-5 rounded">
+          <div class="">
+            <span class=" text-slate-500 text-xs  font-[800]">{time}</span>
+          </div>
+          <div class=" min-w-full">
+              <span class="text-slate-300 font-[600] group-hover:text-teal-300">{titulo}</span>
+              <p class="text-slate-400 text-sm">{parrafo}</p>
+              <span class="text-slate-200 font-[300]">
+                <ul class="flex gap-2 mt-5 text-center max-w-full h-auto flex-wrap ">
+              <li  class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes1}</li> 
+              <li  class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes2}</li>
+              <li   class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes3}</li>
+              <li  class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes4}</li>
+              <li  class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes5}</li>
+              <li  class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{lenguajes6}</li>
+              </ul></span>
+          </div>
+         </a>
+    </div>
+</section>
+<script>
+
+
+</script>
+<style>
+    .hiden{
+        display: none;
+    }
+</style>

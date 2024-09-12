@@ -1,61 +1,204 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+import { undefined } from "astro:schema";
+import Section from "./Section.astro";
+import FindSection from "./FindSection.astro";
 
-const { href, title, body } = Astro.props;
+interface info {
+	info:string | null;
+}
+const {info} = Astro.props;
+
+let carro = info ? "class-read":"class-hiden" 
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
+<section class="mb-16">
+	<div>
+		<p class="mb-4 text-slate-400 ">
+			Buen dia, soy desarrollador y estudiante de sistemas 
+			desde que empeso mi gusto por la programacion supe que
+			desde ese momento tendria una motivacion por el cual deberia
+			seguir estudiando por mis sueños y metas, ese gran deseo desperto
+			en mi una gran motivacion por seguir aprendiendo sobre esta rama
+			tan gustosa y emocionante que me provoca este tipo de sansacion 
+			tan gratificante cada vez que logro obtener una solucionar cada vex que 
+			tengo un proyecto o logica que aveces me deja horas y horas pensando en
+			cual sera el problema o como deberia implementar cierto lenguaje 
 		</p>
-	</a>
-</li>
+		<p class="text-slate-400">
+            De tal manera espero que pueda ser excencial esta motivacion que tengo
+			sobre la programacion y aunque para algunos no sea suficiente dare
+			lo que sea necesario para poder avanzar en este hambito y poder
+			ser un gran programador, y a mis 22 años espero lograr muchas cosas
+			nuevas y buenas en mi vida. Gracias
+		</p>
+	</div>
+</section>
+<ol class="padre" id="titulod">
+	<li class="mb-3">
+		<Section
+		src="https://carlosrojas-e6350.firebaseapp.com/"
+		time="2024-Full Time"
+		titulo="Freenlance Desarrollador Front end"
+		parrafo=`Mejor proyecto se trata de una CHAT
+                ,desarrollado para conversar con personas con su correo electronico
+                el CHAT se puede dialogar de uno a uno se puede 
+                observar su informacion de su registro, si desea hablar con migo coloca 
+                en el buscador cuando se loge carlos@gmail.com`
+		lenguajes1="React"
+		lenguajes2="Vite"
+		lenguajes3="Typescript"
+		lenguajes4="Tailwing"
+		lenguajes5="Zustand"
+		lenguajes6="zod"
+
+
+		></Section>
+	</li>
+	<li class="mb-3">
+		<Section
+		src="https://isodigitalsolution.com/"
+		time="2024-Full Time"
+		titulo="Freenlance Desarrollador de una pagina Web"
+		parrafo=`El trabajo trataba de venta de softaware en la cual me encargaba
+		de lo visual que era la parte front end,aquella pagina estaba bastante robusta
+		e interesante me encargaba del filtrado de la informacion errores de logeo y 
+		configuracion de las paginaciones`
+		lenguajes1="React" 
+		lenguajes2="axios"		
+		lenguajes3="Typescript"
+		lenguajes4="Tailwing"
+
+
+		></Section>
+	</li>
+	<li class="mb-3 ">
+		<Section
+		src=""
+		time="2024-Full Time"
+		titulo="Freenlance Desarrollador Back-end"
+		parrafo=`Cree una pagina que requerian alumnos de la upc lo que necesitaban
+		era un pagina que hiciera un filtro de las personas que se logeaban y 
+		si estaban aptas podian tener un credito para poder comprar un carro toda la info
+		teorica sobre la contabilidad y los requisitos autmaticos lo saque del BCP como modelo
+		de ejemplo`
+		lenguajes1="React"
+		lenguajes2="Next"
+		lenguajes3="Mysql"
+		lenguajes4="Java"
+		lenguajes5="RestApi"
+		lenguajes6="insomnia"
+
+
+		></Section>
+	</li>
+</ol>
+<div class="text-slate-300 font[900]  text-2xl h-40 flex items-center">
+	<h2 id="titulot"  class=" font[900] font-mono text-2xl">Proyectos Personales</h2>
+</div>
+<div>
+	<ol>
+		<li class="mb-3">
+			<FindSection
+			src="https://1109car.github.io/chatIA/"
+			img="/public/img/GPT.png"
+			titulo="Freenlance Desarrollador Front end"
+			parrafo=`Mejor proyecto se trata de una CHAT
+					,desarrollado para conversar con personas con su correo electronico
+					el CHAT se puede dialogar de uno a uno se puede 
+					observar su informacion de su registro, si desea hablar con migo coloca 
+					en el buscador cuando se loge carlos@gmail.com`
+			
+			></FindSection></li>
+			<li class="mb-3">
+				<FindSection
+				src="https://1109car.github.io/empresacafe/t2arquitecuraWeb/index.html"
+				img="/public/img/cafesu.png"
+				titulo="Freenlance Desarrollador Front end"
+				parrafo=`Mejor proyecto se trata de una CHAT
+						,desarrollado para conversar con personas con su correo electronico
+						el CHAT se puede dialogar de uno a uno se puede 
+						observar su informacion de su registro, si desea hablar con migo coloca 
+						en el buscador cuando se loge carlos@gmail.com`
+				
+				></FindSection></li>
+				<li class="mb-3">
+					<FindSection
+					src="https://1109car.github.io/ecommers/E-Commerse/index.html"
+					img="/public/img/ecommers.png"
+					titulo="Freenlance Desarrollador Front end"
+					parrafo=`Mejor proyecto se trata de una CHAT
+							,desarrollado para conversar con personas con su correo electronico
+							el CHAT se puede dialogar de uno a uno se puede 
+							observar su informacion de su registro, si desea hablar con migo coloca 
+							en el buscador cuando se loge carlos@gmail.com`
+					
+					></FindSection></li>
+					<li class="mb-3">
+						<FindSection
+						src="https://1109car.github.io/proyecto_alura/"
+						img="/public/img/javasc.png"
+						titulo="Oracle - Next Education"
+						parrafo=`Este programa es internacional que dan beca a las persoanas
+						que desean ser programadores, te especializan en el area que prefieras 
+						y en ellas son "frnto - end" y "Banck - end" en la cual dura un año`
+						
+						></FindSection></li>
+						<li class="mb-3">
+							<FindSection
+							src="https://1109car.github.io/github_carlos/"
+							img="/public/img/tasa.png"
+							titulo="Oracle - Next Education"
+							parrafo=`Este programa es internacional que dan beca a las persoanas
+							que desean ser programadores, te especializan en el area que prefieras 
+							y en ellas son "frnto - end" y "Banck - end" en la cual dura un año`
+							
+							></FindSection></li>
+							<li class="mb-3">
+								<FindSection
+								src="https://1109car.github.io/Star-War/practicando/index.html"
+								img="/public/img/startwar.png"
+								titulo="Oracle - Next Education"
+								parrafo=`Este programa es internacional que dan beca a las persoanas
+								que desean ser programadores, te especializan en el area que prefieras 
+								y en ellas son "frnto - end" y "Banck - end" en la cual dura un año`
+								
+								></FindSection></li>
+							
+	</ol>
+</div>
+
+
+
+
+<script>
+
+
+	let ul =  document.querySelectorAll(".mb-3")
+
+	ul.forEach((d)=>{
+		
+		d.addEventListener("mouseover",(e)=>{
+
+			ul.forEach(l=>{
+                if (l !== e.currentTarget) {
+					l.classList.add("faded")
+				}
+			})			
+		})
+		d.addEventListener('mouseout', (e) => {
+                    ul.forEach(l => {
+                        l.classList.remove('faded');
+		});
+	})
+	})
+  	
+
+</script>
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	.faded{
+		opacity: 0.5;
 	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+	/* li:empty {
+  display: none;
+} */
 </style>

@@ -1,0 +1,25 @@
+---
+interface Props{
+    img:string
+    titulo:string;
+    parrafo:string;
+    src:string;
+
+}
+
+const {img,titulo,parrafo, src} = Astro.props
+---
+
+<section class="" aria-label="work experiencie ">
+    <div class="">
+         <a href={src} class="max-md:flex max-md:flex-col group grid grid-cols-[1.2fr_4fr] pt-4 pb-4 hover:bg-slate-500 hover:bg-opacity-10 p-5 rounded">
+          <div class="h-auto lg:h-16  w-auto flex pr-3 max-md:h-40 max-md:p-2 rounded max-md:flex max-md:justify-center">
+            <img src={img} alt="imagenes" class="  pt-2 text-slate-500 text-xs rounded  font-[800] h-full w-80"></img>
+          </div>
+          <div class=" min-w-full">
+              <span class="text-slate-300 font-[600] group-hover:text-teal-300">{titulo}</span>
+              <p class="text-slate-400 text-sm">{parrafo}</p>
+          </div>
+         </a>
+    </div>
+</section>

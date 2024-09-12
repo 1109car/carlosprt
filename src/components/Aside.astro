@@ -1,0 +1,135 @@
+---
+interface Props {
+
+}
+
+---
+<div class=" h-auto fixed max-lg:relative max-sm:relative max-sm:flex max-sm:flex-col " id="chance">
+    <h1 class="text-slate-300 text-6xl font-[650] tracking-tight">Carlos Rojas</h1>
+    <h2 class="tracking-tight font-medium text-slate-200 sm:text-xl mt-3">Sistema de la informacion</h2>
+    <h4 class="text-slate-400 leading-normal mt-4 max-w-xs">Desarrollador Front-end y Back-end, 
+        Web & movil & Base de datos consulta y registro.
+    </h4>
+    <nav class="nav hidden lg:block" aria-label="In-page jump links">
+        <ul id="uls" class="mt-16 w-max">
+            <li>
+                <a href="#" id="primero" class="group flex items-center py-3 flex-row">
+                    <span class="text-slate-400 pr-4">
+                        <hr id="lineap" class="border-t-2 border-gray-400 border w-16" />
+                    </span>
+                    <span id="nombrep" class="nav-text text-xs font-bold uppercase tracking-widest text-slate-300 group-hover:text-slate-200 group-focus-visible:text-slate-200">ACERCA DE</span>
+                </a>
+            </li>
+            <li>
+                <a href="#titulod" id="segundo" class="group flex items-center py-3 ">
+                    <span  class="text-slate-400 pr-4">
+                        <hr id="lineas" class="border-t-2 border-gray-500 border w-10 " />
+                    </span>
+                    <span id="nombres" class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experiencia</span>
+                </a>
+            </li>
+            <li>
+                <a href="#titulot" id="tercero" class="group flex items-center py-3 ">
+                    <span  class="text-slate-400 pr-4">
+                        <hr id="lineat" class="border-t-2 border-gray-500 border w-10 " />
+                    </span>
+                    <span id="nombret" class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">PROYECTOS</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <ul class="mt-16 ml-1 flex items-center ">
+            <li class="mr-5">
+                <a href="#">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 16 16" fill="currentColor" 
+                    class="h-6 w-6 text-slate-400" 
+                    aria-hidden="true">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                </a>
+            </li>
+            <li class="mr-5">
+                <a href="#">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 16 16" fill="currentColor" 
+                    class="h-6 w-6 text-slate-400" 
+                    aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a>
+            </li>
+        </ul>
+    </div>
+    
+    
+</div>
+<script>
+    let primero = document.getElementById("primero")
+    let lineap = document.getElementById("lineap")
+    let nombrep = document.getElementById("nombrep")
+
+    let segundo = document.getElementById("segundo")
+    let lineas = document.getElementById("lineas")
+    let nombres = document.getElementById("nombres")
+
+    let tercero = document.getElementById("tercero")
+    let lineat = document.getElementById("lineat")
+    let nombret = document.getElementById("nombret")
+
+    window.addEventListener("scroll",(e)=>{
+        if (window.scrollY >= 0 ) {
+    
+            lineap.style.width="4rem";
+            nombrep.style.color="rgb(203 213 225)";
+
+            lineas.style.width="2.5rem";
+            nombres.style.color="rgb(107 114 128)";
+
+    }
+        if (window.scrollY >= 510 && window.scrollY < 1157) {
+           
+            lineap.style.width="2.5rem";
+            nombrep.style.color="rgb(107 114 128)";
+
+            lineas.style.width="4rem";
+            nombres.style.color="rgb(203 213 225)";
+
+            lineat.style.width="2.5rem";
+            nombret.style.color="rgb(107 114 128)";
+    }
+        if (window.scrollY >= 1157 ) {
+            
+            lineat.style.width="4rem";
+            nombret.style.color="rgb(203 213 225)";
+
+            lineap.style.width="2.5rem";
+            nombrep.style.color="rgb(107 114 128)";
+    
+    }
+
+
+    })
+</script>
+<style>
+/* #chance{ pointer-events: none !important} */
+  #lineap{
+    transition: 0.5s ;
+  }
+  #nombrep{
+    transition: 0.5s ;
+  }
+  #lineas{
+    transition: 0.5s ;
+  }
+  #nombres{
+    transition: 0.5s ;
+  }
+  #lineat{
+    transition: 0.5s ;
+  }
+  #nombret{
+    transition: 0.5s ;
+  }
+</style>
+
