@@ -1,25 +1,26 @@
 ---
 interface Props{
-    time:string;
+ 
+    time?:string;
     titulo:string;
     parrafo:string;
-    src:string;
-    lenguajes1?:string 
-    lenguajes2?:string ;
-    lenguajes3?:string
+    lenguajes1?:string;
+    lenguajes2?:string;
+    lenguajes3?:string;
     lenguajes4?:string;
-    lenguajes5?:string
+    lenguajes5?:string;
     lenguajes6?:string;
+  
 }
 
-const {time,titulo,parrafo, lenguajes1, lenguajes3, lenguajes2,lenguajes4,lenguajes5,lenguajes6, src} = Astro.props
+const { time, titulo,parrafo, lenguajes1, lenguajes3, lenguajes2,lenguajes4,lenguajes5,lenguajes6} = Astro.props;
 ---
 
 <section class="h-auto" aria-label="work experiencie">
     <div class="">
-         <a href={src} class=" group grid grid-cols-[1fr_4fr] pt-4 pb-4 hover:bg-slate-500 hover:bg-opacity-10 p-5 rounded">
+         <a href="" class="group grid grid-cols-[1fr_4fr] pt-4 pb-4 hover:bg-slate-500 hover:bg-opacity-10 p-5 rounded">
           <div class="">
-            <span class=" text-slate-500 text-xs  font-[800]">{time}</span>
+            <span class="text-slate-500 text-xs font-[800]">{time}</span>
           </div>
           <div class=" min-w-full">
               <span class="text-slate-300 font-[600] group-hover:text-teal-300">{titulo}</span>
